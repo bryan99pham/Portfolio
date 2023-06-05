@@ -1,0 +1,9 @@
+# services lists the multiple different apps we want to run via docker
+services:
+  # name for the service
+  client:
+    # location of the Dockerfile
+    build: .
+    # ports, vite defaults to 5173
+    ports:
+      - 5173:5173
