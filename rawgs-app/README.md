@@ -1,45 +1,35 @@
 ## RAWGS App
-This is a game discovery app based on the [RAWG](https://rawg.io/) website
-Give a high-level overview of the project purpose
-- (*Situation*) Describe the application and why you created this program
-- (*Task*) Describe the overall structure of your application and the design process prior to building the program
-- (*Action*) Explain the code you wrote to achieve your desired result
-- (*Result*) Showcase your final application with its functionality
-- Include relevant screenshots
+This is a game discovery app based on the [RAWG](https://rawg.io/) website and the free tier of its [API](https://api.rawg.io/docs/). The reasons why I wanted to work on this project was because I didn't have much experience with CSS and the modern/minimalistic design of the [RAWG](https://rawg.io/) website had very satisfying features and animations that I want to be capable of producing on my own. With a combination of React/Typescript and Vite, my teammate (Giovanni Lituma) and I are proud to have accomplished our goals with this project. Through pure CSS, I could now create simple but eye-catching animations using the transform property and ::before/::after selectors. Features include:
+- View through all games in the RAWG database (350,000+ games)
+- Search for a specific game
+- Scroll through pages with pagination feature
+- Hover over a game "card" to view more details about the game
+- WIP: click on game title to view full details about the game.
 
 ## Technologies
-- List all technologies and versions here
-- Include dependencies and versions
-- Note any deployment tools as well
+- Vite 4.3.2
+- React 18.2.0
+- [RAWG Website](https://rawg.io/) and [RAWG API](https://api.rawg.io/docs/)
+- Deployed on Render (https://rawgs-app.onrender.com/)
 
 ## Competencies
-### JF 2.5
-Can implement a responsive User Interface  
-- List the full text of the job function first
-- Describe a situation where you demonstrated  this job function.
-- Summarize the actions you took to accomplish the goal. 
-- Emphasize the results of this action for your team or your learning. 
-- Connect the competentcy to this project
+### JF 2.3
+Can develop effective user interfaces
+- Using CSS grids and flex, a clean UI layout was created. Additional CSS allowed the inclusion of smooth size scaling and color animations when hovering over different elements on the screen to improve UX. Getting the apropriate effects for the animations required research on CSS basics and the observation of many popular websites such as Apple's and Tesla's. With the knowledge I've gained from this project, I plan on improving the UX of my current project at work.
 
 ### JF 2.7
 Effectively manages state for complex User Interfaces
-- List the full text of the job function first
-- Describe a situation where you demonstrated  this job function.
-- Summarize the actions you took to accomplish the goal. 
-- Emphasize the results of this action for your team or your learning. 
-- Connect the competency to this project
+- The rendering of the grid of cards when the user uses the search bar was based on this state that I created: "const [searchResults, setSearchResults] = useState<Array<Game>>([]);" , in which Game is a custom model/interface that contains properties such as the title, game image, release date, etc. Conditional rendering is then used whenever the user hits enter on the search bar: "(searchResults.length > 0 ? searchResults : games)". Managing state helped our team create a functional search feature, pagination, and switching between pages by accessing the state as it dynamically changes to render what is requested by the user.
 
 ## Table of Contents
 
 - [Installation](#installation)
-- [Usage](#usage)
-- [Features](#features)
 - [Developers](#contributing)
 - [License](#license)
 
 ## Installation
 
-You have two choices to run this app:
+You have two choices to build/run this app:
 - 1. using pnpm
 - 2. using Docker
 
@@ -58,14 +48,6 @@ You have two choices to run this app:
 from the root directory, run the following command:
     docker compose up
 ```
-
-## Usage
-
-[Instructions on how to use the project]
-
-## Features
-
-[List of project features and functionalities]
 
 # Developers
 - [@bryan99pham](https://github.com/bryan99pham)
