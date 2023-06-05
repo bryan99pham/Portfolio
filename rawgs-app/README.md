@@ -29,6 +29,9 @@ Effectively manages state for complex User Interfaces
 
 ## Installation
 
+- Request an API key from https://rawg.io/apidocs (requires signup)
+- Create a file named ".env" and in that file, set VITE_RAWG_API_KEY equal to the API key that you received.
+
 You have two choices to build/run this app:
 - 1. using pnpm
 - 2. using Docker
@@ -36,8 +39,6 @@ You have two choices to build/run this app:
 #### Using pnpm
 
 - Run command: git clone https://github.com/VZ-Devs/rawgs-app.git
-- Request an API key from https://rawg.io/apidocs (requires signup)
-- Create a file named ".env" and in that file, set VITE_RAWG_API_KEY equal to the API key that you received.
 - Run command: npm install -g pnpm
 - Run command: pnpm i
 - Run command: pnpm run dev
