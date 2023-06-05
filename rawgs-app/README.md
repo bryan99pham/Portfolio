@@ -1,4 +1,5 @@
-## Project #2
+## RAWGS App
+This is a game discovery app based on the [RAWG](rawg.io) website
 Give a high-level overview of the project purpose
 - (*Situation*) Describe the application and why you created this program
 - (*Task*) Describe the overall structure of your application and the design process prior to building the program
