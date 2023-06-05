@@ -28,12 +28,12 @@ Give a high-level overview of the project purpose
 
 Thank you for your interest in the Employee Management App!
 With this app, you will be able to:
-	- View all employees in the table
-	- Click on an individual employee's first or last name to view their profile.
-	- Edit their information by clicking on the pencil icon at the end of the row.
-	- Change an employee's profile picture.
-	- Search for employees by typing keywords into the search bar.
-	- Sort employees in the table by their fields.
+- View all employees in the table
+- Click on an individual employee's first or last name to view their profile.
+- Edit their information by clicking on the pencil icon at the end of the row.
+- Change an employee's profile picture.
+- Search for employees by typing keywords into the search bar.
+- Sort employees in the table by their fields.
 
 NOTE: The app has been deployed on https://employeemanagementappui.web.app/ meaning that you DO NOT
 have to follow the instructions to download/install any software.
@@ -82,8 +82,8 @@ Software required to run project:
 Setup 
 -----------------------
 
-				Creating the Database:
-			       ------------------------
+Creating the Database:
+------------------------
 - In Visual Studio (purple logo/icon program), open/load the EmployeeManagementAppAPI folder.
 - Then EmployeeManagementAppAPI/EmployeeManagementAppAPI/EmployeeManagementAppAPI.sln (sln stands for solution)
 - Once the solution file is opened, there will be a section on the right side of the window called "Solution Explorer.
@@ -108,8 +108,8 @@ Setup
 		- Click on OK on the pop up window and "Add Connection window".
 
 
-				Seeding the Database:
-			       -----------------------
+Seeding the Database:
+-----------------------
 - Open Microsoft SQL Server Management Studio
 - In the Object Explorer on the left, go to your server, and under Databases, click on "EmployeeManagementAppDb"
 - Click on the "New Query" button at the top left side of the program's window.
@@ -120,8 +120,8 @@ Once it is all highlighted, click on the Execute button at the top left side of 
 - If no errors were received, the database has been populated with our seed data.
 
 
-				Adjusting your port number:
-			       ----------------------------
+Adjusting your port number:
+----------------------------
 - Open Visual Studio (purple logo/icon program) and use the shortkey: Ctrl + Shift + B to rebuild the database to 
 make sure it is up-to-date.
 - At the top, there is a green play button (triangle-shaped) with the text "IIS Express" next to it, click it.
@@ -139,8 +139,8 @@ How to run app
 If the database isn't still running from the previous section, click on the green play button again to start it.
 
 This step is easier if you open a terminal in Visual Studio Code (blue program):
-	- In the terminal, make sure that you're in the employeemanagementapp-ui directory and run "npm install" to 
+- In the terminal, make sure that you're in the employeemanagementapp-ui directory and run "npm install" to 
 make sure that all dependencies have been installed. This step may be skippable.
-	-Run "ng serve" to see the app in action (try "npm start" in case "ng serve" fails).
+- Run "ng serve" to see the app in action (try "npm start" in case "ng serve" fails).
 
 
