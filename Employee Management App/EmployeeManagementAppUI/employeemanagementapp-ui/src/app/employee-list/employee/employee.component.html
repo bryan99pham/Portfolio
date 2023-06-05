@@ -1,0 +1,277 @@
+<div class="page-header">
+  <div class="container">
+    <h1>{{ header }}</h1>
+  </div>
+</div>
+
+<div class="container" *ngIf="isSingleView">
+  <div class="row top-row">
+    <div class="col-xs-12 row end-xs">
+      <a routerLink="/employees" color="primary" mat-raised-button>
+        <mat-icon>chevron_left</mat-icon>
+        Back
+      </a>
+    </div>
+  </div>
+
+  <mat-card class="example-card">
+    <mat-card-title-group>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title class="card-title">{{ employee.firstName }} {{ employee.lastName }}</mat-card-title>
+      <mat-card-subtitle class="card-subtitle"
+        >Department: {{ employee.department.departmentName }}</mat-card-subtitle
+      >
+      <div class="row center-xs">
+        <div class="col-xs-12">
+          <div class="image-container-view">
+            <img
+              mat-card-xl-image
+              [src]="imageUrl"
+              alt="Profile Image"
+              alt="Photo of a Shiba Inu"
+            />
+          </div>
+        </div>
+      </div>
+    </mat-card-title-group>
+    <br />
+    <br />
+    <mat-card-content>
+      <div class="row">
+        <div class="col-xs-12">
+          <h1>Date of Birth:</h1>
+          <h3>
+            {{ employee.dateOfBirth | date: "MM/dd/yyyy" }}
+          </h3>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-xs-6">
+          <h1>Email:</h1>
+          <h3>
+            {{ employee.email }}
+          </h3>
+        </div>
+        <div class="col-xs-6">
+          <h1>Mobile:</h1>
+          <h3>
+            {{ employee.mobile }}
+          </h3>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-xs-6">
+          <h1>Physical Address:</h1>
+          <h3>
+            {{ employee.address.physicalAddress }}
+          </h3>
+        </div>
+        <div class="col-xs-6">
+          <h1>Postal Address:</h1>
+          <h3>
+            {{ employee.address.postalAddress }}
+          </h3>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<div class="container" *ngIf="isNewEmployee || isEdit">
+  <div class="row top-row">
+    <div class="col-xs-12 row end-xs">
+      <a routerLink="/employees" color="primary" mat-raised-button>
+        <mat-icon>chevron_left</mat-icon>
+        Back
+      </a>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-6">
+      <form #employeeInfoForm="ngForm">
+        <div class="row">
+          <div class="col-xs-6">
+            <mat-form-field appearance="outline">
+              <mat-label>First Name</mat-label>
+              <input
+                type="text"
+                matInput
+                [(ngModel)]="employee.firstName"
+                name="firstName"
+                required
+              />
+              <mat-error>Please provide a first name</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-xs-6">
+            <mat-form-field appearance="outline">
+              <mat-label>Last Name</mat-label>
+              <input
+                type="text"
+                matInput
+                [(ngModel)]="employee.lastName"
+                name="lastName"
+                required
+              />
+              <mat-error>Please provide a last name</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <mat-form-field appearance="outline">
+              <mat-label>Date of Birth</mat-label>
+              <input
+                matInput
+                [matDatepicker]="picker"
+                [(ngModel)]="employee.dateOfBirth"
+                name="dateOfBirth"
+                required
+              />
+              <mat-error>Please provide a date of birth</mat-error>
+              <mat-datepicker-toggle
+                matSuffix
+                [for]="picker"
+              ></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-6">
+            <mat-form-field appearance="outline">
+              <mat-label>Email</mat-label>
+              <input
+                type="text"
+                matInput
+                [(ngModel)]="employee.email"
+                name="email"
+                required=""
+              />
+              <mat-error>Please provide an email</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-xs-6" *ngIf="!isEdit">
+            <mat-form-field appearance="outline">
+              <mat-label>Mobile</mat-label>
+              <input
+                type="text"
+                matInput
+                [(ngModel)]="mobileText"
+                name="mobile"
+                required
+              />
+              <mat-error>Please provide a phone number</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-xs-6" *ngIf="!isNewEmployee">
+            <mat-form-field appearance="outline">
+              <mat-label>Mobile</mat-label>
+              <input
+                type="number"
+                matInput
+                [(ngModel)]="employee.mobile"
+                name="mobile"
+                required
+              />
+              <mat-error>Please provide a phone number</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <mat-form-field appearance="outline">
+              <mat-label>Department</mat-label>
+              <mat-select
+                [(ngModel)]="employee.departmentId"
+                name="department"
+                required
+              >
+                <mat-option
+                  *ngFor="let department of departmentList"
+                  [value]="department.departmentId"
+                >
+                  {{ department.departmentName }}
+                </mat-option>
+              </mat-select>
+              <mat-error>Please provide a department</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <mat-form-field appearance="outline">
+              <mat-label>Physical Address</mat-label>
+              <textarea
+                matInput
+                [(ngModel)]="employee.address.physicalAddress"
+                name="physicalAddress"
+                required
+              ></textarea>
+              <mat-error>Please provide a physical address</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <mat-form-field appearance="outline">
+              <mat-label>Postal Address</mat-label>
+              <textarea
+                matInput
+                [(ngModel)]="employee.address.postalAddress"
+                name="postalAddress"
+                required
+                #postal="ngModel"
+              ></textarea>
+              <mat-error>Please provide a department</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="row between-xs" *ngIf="!isNewEmployee">
+              <button mat-raised-button color="primary" (click)="onUpdate()">
+                Save
+              </button>
+              <button mat-raised-button color="warn" (click)="onDelete()">
+                Delete
+              </button>
+            </div>
+            <div class="row between-xs" *ngIf="isNewEmployee">
+              <button mat-raised-button color="primary" (click)="onAdd()">
+                Add
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-xs-6">
+      <div class="row center-xs">
+        <div class="image-container">
+          <img [src]="imageUrl" alt="Profile Image" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 row center-xs mt-1" *ngIf="!isNewEmployee">
+          <input
+            hidden
+            type="file"
+            #imageUpload
+            (change)="uploadImage($event)"
+          />
+          <button
+            mat-raised-button
+            color="primary"
+            (click)="imageUpload.click()"
+          >
+            Upload Image
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

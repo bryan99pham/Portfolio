@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="C:\Users\Bryan\Desktop\Employee Management App\EmployeeManagementAppAPI\EmployeeManagementAppAPI\EmployeeManagementAppAPI\obj\Release\net5.0\PubTmp\Out\" />
+  <dbfullsql path="C:\Users\Bryan\Desktop\Employee Management App\EmployeeManagementAppAPI\EmployeeManagementAppAPI\EmployeeManagementAppAPI\obj\Release\net5.0\PubTmp\EFSQLScripts\EmployeeManagementAppAPI.DataModels.EmployeeManagementContext.sql" />
+</sitemanifest>

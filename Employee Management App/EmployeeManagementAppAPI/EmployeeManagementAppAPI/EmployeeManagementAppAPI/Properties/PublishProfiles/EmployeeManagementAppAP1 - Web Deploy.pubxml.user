@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAApanGY3Ux5U6TcKo5pDBHnQAAAAACAAAAAAAQZgAAAAEAACAAAADxGqK5xbQyQJup/Dl10rx0Dy6MIbkwZn7/W/pKbVcpJQAAAAAOgAAAAAIAACAAAADSDYpS2R1Oa6e5D+kcNbYpefpLsqLtEN99jqXN+jylCYAAAAAC/YeWVYgz9OUGz2rO2WHD9csCs/Jf8tZsqVqNKFwpkmoNBJJqqB4TsJcHiKGbLCMQsZLnspL6UF6LU0O7KsJfD7bbmP/PxvXknBSOJNjeKgGZIYsOyZoqcGG1W1gZdCSHt3Zqufiekgn1TCWlYzepClNFGxIHaYsEWR64d+q4GkAAAAAcarjWQQlj4icUwMQQZvYKDt4OWzVa3ePyyed5mz8zPK1QmkULrp0HpBb8VX6JqZcir17oOpjH8j1cb4qMQZTy</EncryptedPassword>
+    <History>True|2022-10-11T17:49:16.8102041Z;False|2022-10-11T12:45:54.7443848-05:00;True|2022-10-11T12:01:37.1045349-05:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="EmployeeManagementAppDb">
+      <Value>Data Source=tcp:employeemanagementappserver.database.windows.net,1433%3bInitial Catalog=EmployeeManagementAppDb%3bUser Id=bryan99pham%40gmail.com%40employeemanagementappserver%3bPassword=Pp189503</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="EmployeeManagementAppAPI.DataModels.EmployeeManagementContext">
+      <Value>Data Source=tcp:employeemanagementappserver.database.windows.net,1433%3bInitial Catalog=EmployeeManagementAppDb%3bUser Id=bryan99pham%40gmail.com%40employeemanagementappserver%3bPassword=Pp189503</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

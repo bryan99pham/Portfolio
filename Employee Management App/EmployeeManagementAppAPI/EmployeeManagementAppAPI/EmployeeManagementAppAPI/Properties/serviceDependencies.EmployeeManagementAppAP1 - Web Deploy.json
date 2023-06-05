@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/employeemanagementappserver/databases/EmployeeManagementAppDb",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:EmployeeManagementAppDb",
+      "secretStore": "AzureAppSettings"
+    }
+  }
+}

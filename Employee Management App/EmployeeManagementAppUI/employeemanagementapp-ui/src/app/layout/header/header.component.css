@@ -1,0 +1,29 @@
+/* .pulse {
+  animation: pulse 3s infinite;
+  color:white;
+}
+
+@keyframes pulse {
+  0% {
+    font-variation-settings: 'wght' 100;
+  }
+  50% {
+    font-variation-settings: 'wght' 700;
+  }
+  100% {
+    font-variation-settings: 'wght' 100;
+  }
+} */
+
+.mat-button-base {
+  margin-right: 1em;
+}
+
+/* .example-spacer {
+  flex: 1 1 auto;
+} */
+
+.expansion-panel {
+  width:20px;
+}
+

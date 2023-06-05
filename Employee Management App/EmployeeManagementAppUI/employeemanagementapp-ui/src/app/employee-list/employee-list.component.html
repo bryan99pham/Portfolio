@@ -1,0 +1,169 @@
+<!-- make isNotAuthorized to show whole page and show login page idk the logic yet -->
+
+<div *ngIf="!isNotAuthorized">
+  <div class="page-header">
+    <div class="container">
+      <h1>Employee Management App Login Portal</h1>
+    </div>
+  </div>
+  <div class="image-container">
+    <img src="https://api.logo.com/api/v2/images?format=webp&logo=logo_008eb157-66c5-492a-bcac-62c0d235ef19&width=1000&height=750&margins=166&fit=contain&u=1665425399"/>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <form #loginForm="ngForm">
+        <div class="row">
+          <div class="col-xs-6">
+            <div class="loginForm">
+              <mat-form-field appearance="fill" style="width: 16.5vw">
+                <mat-label>Email</mat-label>
+                <input
+                  matInput
+                  [(ngModel)]="loginEmail"
+                  name="Email"
+                  required
+                />
+                <mat-error>Please provide an email</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+        <div class="example-container">
+          <mat-form-field appearance="fill">
+            <mat-label>Enter your password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'"
+            required
+            name="password"
+            [(ngModel)]="loginPassword"
+            />
+            <mat-error>Please provide a password</mat-error>
+            <button
+              mat-icon-button
+              matSuffix
+              (click)="hide = !hide"
+              [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hide"
+            >
+              <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+            </button>
+          </mat-form-field>
+        </div>
+        <button mat-raised-button color="primary" [disabled]="!isValid()" (click)="onLogin()">
+          Log In
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="newUser">
+  <div class="page-header">
+    <div class="container">
+      <h1>Employees</h1>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row end-xs mt-1">
+      <div class="col-xs-12">
+        <input
+          type="text"
+          class="search"
+          placeholder="Search for Employee"
+          [(ngModel)]="filterString"
+          (keyup)="filterEmployees()"
+        />
+        <a
+          routerLink="/employees/add"
+          mat-raised-button
+          color="primary"
+          class="ml-1"
+          >Add New Employee</a
+        >
+        <!-- *ngIf="isAuthorized" -->
+        <a
+          routerLink="/employees"
+          mat-raised-button
+          color="primary"
+          class="ml-1"
+          (click)="onAuthorize()"
+          >Authorized Users</a
+        >
+      </div>
+    </div>
+    <div class="mt-1 mat-elevation-z8">
+      <table mat-table matSort [dataSource]="dataSource">
+        <!-- First Name Column -->
+        <ng-container matColumnDef="firstName">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>First Name</th>
+          <td mat-cell *matCellDef="let element">
+            <a [routerLink]="['/employees/view', element.id]">
+              {{ element.firstName }}
+            </a>
+          </td>
+        </ng-container>
+
+        <!-- Last Name Column -->
+        <ng-container matColumnDef="lastName">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Last Name</th>
+          <td mat-cell *matCellDef="let element">
+            <a [routerLink]="['/employees/view', element.id]">
+              {{ element.lastName }}
+            </a>
+          </td>
+        </ng-container>
+
+        <!-- Date of Birth Column -->
+        <ng-container matColumnDef="dateOfBirth">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>
+            Date of Birth
+          </th>
+          <td mat-cell *matCellDef="let element">
+            {{ element.dateOfBirth | date: "MM/dd/yyyy" }}
+          </td>
+        </ng-container>
+
+        <!-- Email Column -->
+        <ng-container matColumnDef="email">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Email</th>
+          <td mat-cell *matCellDef="let element">{{ element.email }}</td>
+        </ng-container>
+
+        <!-- Mobile Column -->
+        <ng-container matColumnDef="mobile">
+          <th mat-header-cell *matHeaderCellDef>Mobile</th>
+          <td mat-cell *matCellDef="let element">{{ element.mobile }}</td>
+        </ng-container>
+
+        <!-- Department Column -->
+        <ng-container matColumnDef="department">
+          <th mat-header-cell *matHeaderCellDef>Department</th>
+          <td mat-cell *matCellDef="let element">
+            {{ element.department.departmentName }}
+          </td>
+        </ng-container>
+
+        <!-- Edit Column -->
+        <ng-container matColumnDef="edit">
+          <th mat-header-cell *matHeaderCellDef></th>
+          <td mat-cell *matCellDef="let element">
+            <a [routerLink]="['/employees', element.id]">
+              <mat-icon color="primary">edit</mat-icon>
+              <!-- *ngIf="isAuthorized" -->
+            </a>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+      <mat-paginator
+        [length]="100"
+        [pageSize]="10"
+        [pageSizeOptions]="[5, 10, 25, 100]"
+        aria-label="Select page"
+      >
+      </mat-paginator>
+    </div>
+  </div>
+</div>
