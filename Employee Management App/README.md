@@ -1,33 +1,5 @@
-## Project #1
-Give a high-level overview of the project purpose
-- (*Situation*) Describe the application and why you created this program
-- (*Task*) Describe the overall structure of your application and the design process prior to building the program
-- (*Action*) Explain the code you wrote to achieve your desired result
-- (*Result*) Showcase your final application with its functionality
-- Include relevant screenshots
-
-## Technologies
-- List all technologies and versions here
-- Include dependencies and versions
-- Note any deployment tools as well
-
-## Competencies
-### JF XX.XX
-- List the full text of the job function first
-- Describe a situation where you demonstrated this job function.
-- Summarize the actions you took to accomplish the goal. 
-- Emphasize the results of this action for your team or your learning. 
-- Connect the competentcy to this project
-
-### JF XX.XX
-- List the full text of the job function first
-- Describe a situation where you demonstrated  this job function.
-- Summarize the actions you took to accomplish the goal. 
-- Emphasize the results of this action for your team or your learning. 
-- Connect the competency to this project
-
-Thank you for your interest in the Employee Management App!
-With this app, you will be able to:
+## The Employee Management App
+The purpose of this app is to expand my skills with the tech stack used at my job. The backend is developed using the .NET Core framework to create a RESTful API with multiple endpoints, while the frontend is developed using Angular to create a clean and simple UI. Additionally, I was able to practice creating a simple database to be used by the app with Microsoft SQL Server Management Studio. With this app, the user is able to interact with the UI to conduct CRUD operations on employee information (provided by random dummy data). Features include: 
 - View all employees in the table
 - Click on an individual employee's first or last name to view their profile.
 - Edit their information by clicking on the pencil icon at the end of the row.
@@ -35,11 +7,27 @@ With this app, you will be able to:
 - Search for employees by typing keywords into the search bar.
 - Sort employees in the table by their fields.
 
+## Technologies
+- .NET Core 5.0
+- Visual Studio, VS Code, and Microsoft SQL Server Management Studio
+- Angular 14.2.4
+- Backend deployed on Azure
+- Frontend deployed on Render
+
+## Competencies
+### JF 3.6   
+Can implement a RESTful API
+- Using the .NET framework, I created a RESTful API that had multiple endpoints using GET, POST, PUT, and DELETE HTTP requests to allow for CRUD operations. With this project, I have learned what the purpose of an API and how it can be used by the frontend (when set up correctly) to manipulate/query/define data in a database.
+
+### JF 3.2 
+Can explain the principles and uses of relational and non-relational databases
+- To have a functioning backend, I created the schema for a database that holds employee information (First Name, Last Name, Mobile, Email, DOB, etc). Using Microsoft SQL Server Management Studio, I wrote a SQL script to create the database for the app. This database is a relational database as it is structured with rows and columns, and contains keys (primary/foreign) to query/manipulate/define data in different tables that are related to each other. Some advantages that relational databases are known for is the fast time they take to query as well as their capability to keep data secure with a high level of data integrity. These reasons are what was discussed between my project partner (Zuri Arrington) and I. As the result of this project, I have learned the valuable skill of being able to work with databases efficiently using SQL.
+
 NOTE: The app has been deployed on https://employeemanagementappui.web.app/ meaning that you DO NOT
-have to follow the instructions to download/install any software.
+have to follow the build/setup instructions to view this project.
 
 Software required to run project:
-*NOTE: the project may not be able to run without many extra steps. 
+*NOTE: the project may not be able to run if any instructions are skipped.
 -------------------------------------
 
 - Visual Studio 2022 - Community Edition (this is not the same as VS Code and has a purple logo/icon instead of blue): 
@@ -87,7 +75,7 @@ Software required to run project:
 - Once the solution file is opened, there will be a section on the right side of the window called "Solution Explorer.
 	+ Scroll all the way down and near the bottom, open the file named appsettings.json.
 	+ Based on the step you took when connecting to your local SQL server, in the line that begins with "EmployeeManagementAppDb" (should be line 11):
-		- In the string server should be assigned to what your local SQL server's name is:
+		- In the string, server should be assigned to what your local SQL server's name is. You may be able to leave the period, but if you know the name of your server, please change the string accordingly.
 		- Example 1: "EmployeeManagementAppDb": "server=.;database=EmployeeManagementAppDb;Trusted_Connection=true"
 		- Example 2: "EmployeeManagementAppDb": "server=DESKTOP12345;database=EmployeeManagementAppDb;Trusted_Connection=true"
 		- Save the file
