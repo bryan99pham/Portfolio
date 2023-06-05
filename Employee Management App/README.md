@@ -79,7 +79,7 @@ Software required to run project:
 	+ run the following command in the terminal excluding the double quotes: "npm install -g @angular/cli"
 
 
-##### Setup 
+# Setup 
 
 Creating the Database:
 ------------------------
