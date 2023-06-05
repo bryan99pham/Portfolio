@@ -81,8 +81,7 @@ Software required to run project:
 
 # Setup 
 
-Creating the Database:
-------------------------
+### Creating the Database:
 - In Visual Studio (purple logo/icon program), open/load the EmployeeManagementAppAPI folder.
 - Then EmployeeManagementAppAPI/EmployeeManagementAppAPI/EmployeeManagementAppAPI.sln (sln stands for solution)
 - Once the solution file is opened, there will be a section on the right side of the window called "Solution Explorer.
@@ -107,8 +106,7 @@ Creating the Database:
 		- Click on OK on the pop up window and "Add Connection window".
 
 
-Seeding the Database:
------------------------
+### Seeding the Database:
 - Open Microsoft SQL Server Management Studio
 - In the Object Explorer on the left, go to your server, and under Databases, click on "EmployeeManagementAppDb"
 - Click on the "New Query" button at the top left side of the program's window.
@@ -119,8 +117,7 @@ Once it is all highlighted, click on the Execute button at the top left side of 
 - If no errors were received, the database has been populated with our seed data.
 
 
-Adjusting your port number:
-----------------------------
+### Adjusting your port number:
 - Open Visual Studio (purple logo/icon program) and use the shortkey: Ctrl + Shift + B to rebuild the database to 
 make sure it is up-to-date.
 - At the top, there is a green play button (triangle-shaped) with the text "IIS Express" next to it, click it.
@@ -139,7 +136,7 @@ If the database isn't still running from the previous section, click on the gree
 
 This step is easier if you open a terminal in Visual Studio Code (blue program):
 - In the terminal, make sure that you're in the employeemanagementapp-ui directory and run "npm install" to 
-make sure that all dependencies have been installed. This step may be skippable.
+make sure that all dependencies have been installed.
 - Run "ng serve" to see the app in action (try "npm start" in case "ng serve" fails).
 
 
