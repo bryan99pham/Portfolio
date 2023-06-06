@@ -12,7 +12,7 @@ The purpose of this app is to expand my skills with the tech stack used at my jo
 - Visual Studio, VS Code, and Microsoft SQL Server Management Studio
 - Angular 14.2.4
 - Backend deployed on Azure
-- Frontend deployed on Render
+- Frontend deployed on Google Firebase
 
 ## Competencies
 ### JF 3.6   
@@ -26,8 +26,13 @@ Can explain the principles and uses of relational and non-relational databases
 NOTE: The app has been deployed on https://employeemanagementappui.web.app/ meaning that you DO NOT
 have to follow the build/setup instructions to view this project.
 
-Software required to run project:
-*NOTE: the project may not be able to run if any instructions are skipped.
+# Instructions to build frontend locally and use deployed backend
+- Install Angular CLI (After Installing NodeJS):
+	+ run the following command in the terminal excluding the double quotes: "npm install -g @angular/cli"
+- run npm install
+- run ng serve
+
+# Software required to build both the frontend and backend of the project locally:
 -------------------------------------
 
 - Visual Studio 2022 - Community Edition (this is not the same as VS Code and has a purple logo/icon instead of blue): 

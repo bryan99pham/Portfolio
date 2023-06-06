@@ -1,4 +1,3 @@
-Thank you for your interest in the Employee Management App!
 With this app, you will be able to:
 	- View all employees in the table
 	- Click on an individual employee's first or last name to view their profile.

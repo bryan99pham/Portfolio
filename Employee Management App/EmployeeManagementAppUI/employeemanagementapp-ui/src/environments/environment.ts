@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'https://localhost:44383'
+  baseUrl: 'https://employeemanagementappapi.azurewebsites.net'
 };
 
 /*
