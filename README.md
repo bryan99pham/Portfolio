@@ -1,6 +1,6 @@
 # Final Portfolio
 
-This repository is a collection of some of my key learnings during my 2022 - 2023 apprenticeship at Verizon and Multiverse.
+This repository is a collection of some of my key learnings during my 2022 - 2023 apprenticeship at Verizon.
 
 ## Overview of Apprenticeship
 - **Host Company**: Verizon
