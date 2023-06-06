@@ -27,10 +27,11 @@ NOTE: The app has been deployed on https://employeemanagementappui.web.app/ mean
 have to follow the build/setup instructions to view this project.
 
 # Instructions to build frontend locally and use deployed backend
-- Install Angular CLI (After Installing NodeJS):
-	+ run the following command in the terminal excluding the double quotes: "npm install -g @angular/cli"
-- run npm install
-- run ng serve
+- Make sure that you are in the ./Multiverse-Portfolio/Employee Management App/EmployeeManagementAppUI/employeemanagementapp-ui directory
+- Install Angular CLI:
+	+ Run the following command in the terminal excluding the double quotes: "npm install -g @angular/cli"
+- Run npm install
+- Run "ng serve" to run and build the app (try "npm start" in case "ng serve" fails).
 
 # Software required to build both the frontend and backend of the project locally:
 -------------------------------------
@@ -76,7 +77,7 @@ have to follow the build/setup instructions to view this project.
 
 ### Creating the Database:
 - In Visual Studio (purple logo/icon program), open/load the EmployeeManagementAppAPI folder.
-- Then EmployeeManagementAppAPI/EmployeeManagementAppAPI/EmployeeManagementAppAPI.sln (sln stands for solution)
+- Then open the file: EmployeeManagementAppAPI/EmployeeManagementAppAPI/EmployeeManagementAppAPI.sln (sln stands for solution)
 - Once the solution file is opened, there will be a section on the right side of the window called "Solution Explorer.
 	+ Scroll all the way down and near the bottom, open the file named appsettings.json.
 	+ Based on the step you took when connecting to your local SQL server, in the line that begins with "EmployeeManagementAppDb" (should be line 11):
