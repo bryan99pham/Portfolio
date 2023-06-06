@@ -33,23 +33,12 @@ Effectively manages state for complex User Interfaces
 - Create a file named ".env" and in that file, set VITE_RAWG_API_KEY equal to the API key that you received.
 + Example: VITE_RAWG_API_KEY = 123213213213123213213213
 
-You have two choices to build/run this app:
-- 1. using pnpm
-- 2. using Docker
-
 #### Using pnpm
 
 - Run command: git clone https://github.com/VZ-Devs/rawgs-app.git
 - Run command: npm install -g pnpm
 - Run command: pnpm i
 - Run command: pnpm run dev
-
-#### Using Docker
-- Install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
-```
-from the root directory, run the following command:
-    docker compose up
-```
 
 # Developers
 - [@bryan99pham](https://github.com/bryan99pham)
