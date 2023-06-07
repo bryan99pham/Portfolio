@@ -19,7 +19,7 @@ Can develop effective user interfaces
 
 ### JF 2.7
 Effectively manages state for complex User Interfaces
-- The rendering of the grid of cards when the user uses the search bar was based on this state that I created: "const [searchResults, setSearchResults] = useState<Array<Game>>([]);" , in which Game is a custom model/interface that contains properties such as the title, game image, release date, etc. Conditional rendering is then used whenever the user hits enter on the search bar: "(searchResults.length > 0 ? searchResults : games)". Managing state helped our team create a functional search feature, pagination, and switching between pages by accessing the state as it dynamically changes to render what is requested by the user.
+- The rendering of the grid of cards when the user uses the search bar was based on this state that I created: "const [searchResults, setSearchResults] = useState<<Array<Game>>([]);" , in which Game is a custom model/interface that contains properties such as the title, game image, release date, etc. Conditional rendering is then used whenever the user hits enter on the search bar: "(searchResults.length > 0 ? searchResults : games)". Managing state helped our team create a functional search feature, pagination, and switching between pages by accessing the state as it dynamically changes to render what is requested by the user.
 
 ## Table of Contents
 

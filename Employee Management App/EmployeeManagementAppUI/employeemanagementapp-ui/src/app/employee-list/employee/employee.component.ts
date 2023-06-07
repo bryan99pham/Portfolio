@@ -73,7 +73,7 @@ export class EmployeeComponent implements OnInit{
 
           } else if (routePath === 'View'.toLowerCase() && !this.isNewEmployee) {
             this.isSingleView = true;
-            this.header = 'SINGLE VIEW';
+            this.header = 'Employee Profile';
             this.employeeService.getSingleEmployee(this.employeeId)
             .subscribe(
               (response) => {
